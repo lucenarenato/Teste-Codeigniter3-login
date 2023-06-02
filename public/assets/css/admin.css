@@ -1,0 +1,34 @@
+/*.admin-bdadmin.css */
+body{
+    background:#fff;
+}
+
+.action-bar{
+    padding-bottom:1em;
+}
+
+.page-content{
+    background:#fff;
+    padding:1em;
+}
+
+.navbar-nav > li > a:hover,
+.dash-bd .dash-lnk, .user-bd .user-lnk{
+    background:#333;
+	color:#fff;
+}
+
+/* Stats */
+.stat-row{
+    margin-bottom:2em;
+}
+.stat-box > div{
+    background:#fff;
+    border:1px solid #ddd;
+    padding:1em 1em 0.34em;
+    text-align:center;
+}
+.stat-box h3{
+    margin-bottom:2px;
+    margin-top:0;
+}

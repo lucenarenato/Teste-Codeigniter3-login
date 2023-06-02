@@ -49,12 +49,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['register'] = 'user/register';
-$route['login'] = 'user/login';
-$route['logout'] = 'user/logout';
-
-//$route['default_controller'] = 'forum';
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'site';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+/**
+ * 
+ * SITE
+ * 
+*/
+
+# Site
+$route['home'] = 'site/index';
+$route['about'] = 'site/about';
+$route['contact'] = 'site/contact';
+$route['contact/message'] = 'site/sendMessage';
+
+/**
+ * 
+ * BACKEND
+ * 
+*/
+
+# Admin
+$route['admin'] = 'auth';
+$route['accounts/signup'] = 'auth/signup';
+$route['accounts/login'] = 'auth/index';
+$route['logout'] = 'auth/logout';
+
+# Users
+$route['admin/users'] = 'admin/users/index';
+$route['admin/users/(:any)'] = 'admin/users/index/$1';
+$route['admin/user/save'] = 'admin/users/saveUser';
+$route['admin/user/perm'] = 'admin/users/set_perms';
+$route['admin/user/suspend/(:any)'] = 'admin/users/suspend_user/$1';
+$route['admin/suspended-users'] = 'admin/users/suspended';
+
+$route['admin/permissions'] = 'admin/users/permissions';
+$route['admin/permissions/(:any)'] = 'admin/users/permissions/$1';
+$route['admin/permissions/(:any)/(:any)'] = 'admin/users/permissions/$1/$2';

@@ -1,4 +1,6 @@
-# Dockerize Codeigniter App With docker-compose
+# TESTE DEV - Codeigniter 3 (Many Minds)
+
+## Dockerize Codeigniter App With docker-compose
 
 ## Test Running Application
 
@@ -11,13 +13,23 @@ docker-compose -f docker-compose.yml up --build -d
 docker-compose up --build --force-recreate --no-deps
 ```
 ```sh
-app running in port 8181 ---> cek in browser
+app running in port 80 ---> cek in browser
 ```
 ```sh
 phpmyadmin running in port 8282 ---> cek in browser
 ```
 ```sh
-login with username `ci` and password `ci`
+login with username `root` and password `password`
+```
+## Login
+- 'admin@example.com', '123456'
+## Uso de Biblioteca -  CodeIgniter-Aauth
+
+- https://github.com/emreakay/CodeIgniter-Aauth/wiki/2)-Installation-and-Configuration
+
+```
+ 'max_login_attempt'              => 3,
+ 'max_login_attempt_time_period'  => "5 minutes",
 ```
 
 ## env-in-CodeIgniter
