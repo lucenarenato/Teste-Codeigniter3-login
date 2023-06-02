@@ -1,4 +1,4 @@
-# Codeigniter Admin/Website boilerplate
+# Codeigniter Admin/Website 
 A full template with backend, frontend, login and dashboard
 
 ### Setup
